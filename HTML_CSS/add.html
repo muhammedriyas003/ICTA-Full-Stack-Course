@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="mystyle.css">
+
+    <script>
+        function w() {
+
+            var n = parseInt(document.getElementById("num1").value);
+            var m = parseInt(document.getElementById("num2").value);
+            var k = document.getElementById("sel").value;
+            var x = n + m;
+            var y = n - m;
+            var z = n * m;
+            var w = n / m;
+
+            if (k == "add") {
+
+                console.log(x);
+            }
+
+
+            if (k == "sub") {
+
+                console.log(y);
+            }
+
+            if (k == "mul") {
+
+                console.log(z);
+            }
+
+            if (k == "divi") {
+
+                console.log(w);
+            }
+
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+
+
+    </div>
+
+    <div class="card bg-success">
+
+
+
+
+        <form>
+            <table class="table table-dark table-stripped">
+
+                <tr>
+                    <td> Num1 </td>
+                    <td> <input type="number" id=num1></td>
+                </tr>
+
+                <tr>
+                    <td> Num2 </td>
+                    <td> <input type="number" id=num2></td>
+                </tr>
+
+                <tr>
+                    <td> Operation </td>
+                    <td>
+
+                        <select id="sel">
+
+                            <option value="add"> add </option>
+
+                            <option value="sub"> sub </option>
+
+                            <option value="mul"> mul </option>
+
+                            <option value="divi"> divi </option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+                    <td> <button type="submit" class="btn btn-warning" onclick="w()" ;> Result </button></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>

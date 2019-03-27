@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,9 +12,44 @@
 
     <link rel="stylesheet" href="mystyle.css">
 
+    <script>
+
+        function q() {
+
+            var a = document.getElementById("name").value;
+
+            var b = document.getElementById("rollno").value;
+
+            var c = document.getElementById("addno").value;
+
+            var d = document.getElementById("coll").value;
+
+            var h = document.getElementById("dis").value;
+
+            var e = document.getElementById("user").value;
+
+            var f = document.getElementById("pass").value;
+
+            var g = document.getElementById("cpass").value;
+
+
+            console.log(a, b, c, d, h, e, f, g);
+
+        }
+
+
+    </script>
+
 </head>
+
 <body>
-    
+
+    <div>
+
+
+        
+    </div>
+
     <div class="container">
 
         <div class="row">
@@ -23,66 +60,69 @@
 
             <div class="col col-12 col-sm-4">
 
+                <form>
+
                     <table class="table">
-                            <tr>
-                                <td> Nmae </td>
-                                <td> <input type="text"> </td>
-                            </tr>
-                            
-                            <tr>
-                                    <td> Roll No </td>
-                                    <td> <input type="text"> </td>
-                            </tr>
-                            
-                            <tr>
-                                    <td> Addmission No </td>
-                                    <td> <input type="text"> </td>
-                            </tr>
-                            
-                            <tr>
-                                    <td> College </td>
-                                    <td> <input type="text"> </td>
-                            </tr>
-                            
-                            <tr>
-                                <td> District </td>
-                                <td>
-                                    <select>
-                                        <option> Calicut </option>
-                                        <option> Malappuram </option>
-                                        <option> Ernakulam </option>
-                                        <option> Trissur </option>
-                                    </select>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                    <td> Username </td>
-                                    <td> <input type="text"> </td>
-                            </tr>
-                            
-                            <tr>
-                                    <td> Password </td>
-                                    <td> <input type="password"> </td>
-                            </tr>
-                            
-                            <tr>
-                                    <td> Confirm Password </td>
-                                    <td> <input type="password"> </td>
-                            </tr>
-                            
-                            <tr>
-                                <td> </td>
-                                <td> <button class="btn btn-success"> Register </button> </td>
-                            </tr>
-                            
-                            </table>
+                        <tr>
+                            <td> Nmae </td>
+                            <td> <input type="text" id="name"> </td>
+                        </tr>
 
-                        <div>
+                        <tr>
+                            <td> Roll No </td>
+                            <td> <input type="text" id="rollno"> </td>
+                        </tr>
 
-                            <a href="http://127.0.0.1:1234">Login here..!</a> 
+                        <tr>
+                            <td> Addmission No </td>
+                            <td> <input type="text" id="addno"> </td>
+                        </tr>
 
-                        </div>
+                        <tr>
+                            <td> College </td>
+                            <td> <input type="text" id="coll"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> District </td>
+                            <td>
+                                <select id="dis">
+                                    <option value="calicut"> Calicut </option>
+                                    <option value="malappuram"> Malappuram </option>
+                                    <option value="ernakulam"> Ernakulam </option>
+                                    <option value="trissur"> Trissur </option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td> Username </td>
+                            <td> <input type="text" id="user"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> Password </td>
+                            <td> <input type="password" id="pass"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> Confirm Password </td>
+                            <td> <input type="password" id="cpass"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> </td>
+                            <td> <button type="button" class="btn btn-success" onclick="q()" ;> Register </button> </td>
+                        </tr>
+
+                    </table>
+                </form>
+
+                <div>
+
+                    <a href="http://127.0.0.1:1234">Login here..!</a>
+
+                </div>
 
 
             </div>
@@ -98,4 +138,5 @@
 
 
 </body>
+
 </html>
