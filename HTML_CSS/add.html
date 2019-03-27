@@ -11,42 +11,7 @@
 
     <link rel="stylesheet" href="mystyle.css">
 
-    <script>
-        function w() {
-
-            var n = parseInt(document.getElementById("num1").value);
-            var m = parseInt(document.getElementById("num2").value);
-            var k = document.getElementById("sel").value;
-            var x = n + m;
-            var y = n - m;
-            var z = n * m;
-            var w = n / m;
-
-            if (k == "add") {
-
-                console.log(x);
-            }
-
-
-            if (k == "sub") {
-
-                console.log(y);
-            }
-
-            if (k == "mul") {
-
-                console.log(z);
-            }
-
-            if (k == "divi") {
-
-                console.log(w);
-            }
-
-
-
-        }
-
+    <script src="myscript.js">
 
     </script>
 </head>
@@ -96,11 +61,23 @@
 
                 <tr>
                     <td> </td>
-                    <td> <button type="submit" class="btn btn-warning" onclick="w()" ;> Result </button></td>
+                    <td> <button type="button" class="btn btn-warning" onclick="w()" ;> Result </button></td>
                 </tr>
 
 
             </table>
+
+            <tr>
+
+                <td>
+                    <p id="result">
+
+
+                    </p>
+
+
+                </td>
+            </tr>
         </form>
     </div>
 
