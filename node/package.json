@@ -9,6 +9,7 @@
   "author": "Muhammed Riyas",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "lodash": "~4.17.11"
+    "lodash": "~4.17.11",
+    "express": "~4.16.4"
   }
 }

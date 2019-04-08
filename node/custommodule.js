@@ -2,8 +2,8 @@
 const mymodule=require('./moduleadd');
 
 
-var x=12;
-var y=13;
+var x=4452;
+var y=3533;
 
 
 console.log(mymodule.addnum(x,y));
