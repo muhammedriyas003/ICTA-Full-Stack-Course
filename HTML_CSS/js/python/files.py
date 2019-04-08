@@ -1,0 +1,6 @@
+a=open('test.dat','w')
+a.write("hi i am tony")
+a.write("my name is khan")
+a.close()
+a=open('test.dat','r')
+print a.read()
