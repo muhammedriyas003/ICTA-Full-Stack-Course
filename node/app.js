@@ -16,7 +16,7 @@ app.get('/home',(req,res)=>{
 
 app.get('/contact',(req,res)=>{
 
-    res.send('contact details');
+    res.send('{"name":"tom","age":23},,{"name":"riyas","age":56},,{"name":"manu","age":27},{"name":"kali","age":23}]');
 })
 app.listen(3000);
 
