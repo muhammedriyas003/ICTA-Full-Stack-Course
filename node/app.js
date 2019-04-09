@@ -1,22 +1,41 @@
 
 
-const x=require('express');
+const x=require('express');//loading express to x
+const y=require('express-handlebars'); //loading express handler to y
 
-var app=x();
+var app=x(); //assign x to app
 
-app.get('/',(req,res)=>{
-
-    res.send('hello.html');
-});
+app.engine('handlebars',y({defaultLayout:'mainpage'})); //setup template engine and setting a layout page "main page"
+app.set('view engine','handlebars');
+app.use(x.static('views/static')); //to use static contents like images and styles
+app.use(x.urlencoded()); //data fetch from url
 
 app.get('/home',(req,res)=>{
 
-    res.send('welcome to home');
-})
+    res.render('home');
+});
 
-app.get('/contact',(req,res)=>{
+app.get('/index',(req,res)=>{
 
-    res.send('{"name":"tom","age":23},,{"name":"riyas","age":56},,{"name":"manu","age":27},{"name":"kali","age":23}]');
-})
-app.listen(3000);
+    res.render('index');
+});
+
+app.get('/about',(req,res)=>{
+
+    res.render('about');// res to send values to user
+});
+app.get('/gallery',(req,res)=>{
+
+    res.render('gallery');
+});
+
+app.post('/getdata',(req,res)=>{
+
+    var name=req.body.name; // req to read data from user
+    var address=req.body.address;
+    var mobile=req.body.mobile;
+     res.send(name+"<br>"+address+"<br>"+mobile+"<br>");
+
+});
+app.listen(3003);
 
