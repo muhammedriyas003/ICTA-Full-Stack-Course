@@ -10,9 +10,24 @@ app.set('view engine','handlebars');
 app.use(x.static('views/static')); //to use static contents like images and styles
 app.use(x.urlencoded()); //data fetch from url
 
+app.post('/login',(req,res)=>{
+
+    var user=req.body.username;
+    var pass=req.body.password;
+
+    if (user==admin && pass==1234)
+    {
+        res.send("success");
+    }
+    else
+    {
+        res.send("failed");
+    }
+})
+
 app.get('/home',(req,res)=>{
 
-    res.render('home');
+    res.render('home',{name:'Riyaz'});
 });
 
 app.get('/index',(req,res)=>{
@@ -37,5 +52,7 @@ app.post('/getdata',(req,res)=>{
      res.send(name+"<br>"+address+"<br>"+mobile+"<br>");
 
 });
-app.listen(3003);
+app.listen(process.env.PORT || 3003,()=>{
+    console.log('app running successfully');
+});
 
