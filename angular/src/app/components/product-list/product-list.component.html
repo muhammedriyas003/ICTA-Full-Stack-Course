@@ -1,0 +1,41 @@
+<div id="t">
+
+  <h1> {{title}} </h1>
+
+</div>
+
+<!-- <div class="card">
+  <div class="card-header"> PRODUCT LIST</div>
+
+  <div class="card-body"> -->
+    <div class="table-responsive">
+      <table class="table table-stripped"
+      *ngIf = 'products && products.length'>
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-success" (click)='show()'> {{showImage? 'Hide' : 'show'}} image </button>
+            </th>
+            <th>PRODUCTS</th>
+            <th>CODE</th>
+            <th>AVAILABLE</th>
+            <th>PRICE</th>
+            <th>5 STAR RATING</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = 'let product of products'>
+            <td> <img *ngIf="showImage" src={{product.imageUrl}} title={{product.productName}} style.width.px = {{imageWidth}} style.margin.px = {{imageWidth}}></td>
+
+            <td>{{product.productName | uppercase}}</td>
+            <td>{{product.productCode }}</td>
+            <td>{{product.releaseDate | date}}</td>
+            <td>{{product.price | currency:'INR': symbol:'1.2-2'}}</td>
+            <td>{{product.starRating}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- </div>
+  </div>
+</div> -->

@@ -1,0 +1,78 @@
+
+
+<div class="container-fluid">
+  <br>
+<div class="card bg-danger"> 
+  <br>
+ Add Your Product</div>
+<br>
+<div class="row">
+  <div class="col col-sm-2"></div>
+  <div class="col col-sm-8">
+    <form (ngSubmit)="addProduct()">
+      <div class="table-responsive">
+    <table class="table table-stripped">
+  
+      <tr>
+        <td>Product Id :</td>
+        <td>
+          <input type="number" placeholder="product_id" name="p_id" [(ngModel)]=productItem.productId required>
+        </td>
+      </tr>
+      <tr>
+        <td>Product Name :</td>
+        <td>
+          <input type="text" placeholder="product_name" name="p_name" [(ngModel)]=productItem.productName required>
+        </td>
+      </tr>
+      <tr>
+        <td>Product Code :</td>
+        <td>
+          <input type="text" placeholder="product_code" name="p_code" [(ngModel)]=productItem.productCode required>
+        </td>
+      </tr>
+      <tr>
+        <td>Release Date :</td>
+        <td>
+          <input type="date" placeholder="release_date" name="p_date" [(ngModel)]=productItem.releaseDate required>
+        </td>
+      </tr>
+      <tr>
+        <td>Description :</td>
+        <td>
+          <input type="text" placeholder="description" name="p_des" [(ngModel)]=productItem.description required>
+        </td>
+      </tr>
+      <tr>
+        <td>Price :</td>
+        <td>
+          <input type="number" placeholder="product_price" name="p_price" [(ngModel)]=productItem.price required>
+        </td>
+      </tr>
+      <tr>
+        <td>Star Rating :</td>
+        <td>
+          <input type="number" placeholder="product_rating" name="p_rating" [(ngModel)]=productItem.starRating required>
+        </td>
+      </tr>
+      <tr>
+        <td>Upload Image :</td>
+        <td>
+          <input type="text" placeholder="product_image" name="p_image" [(ngModel)]=productItem.imageUrl required>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button class="btn btn-success">SUBMIT</button>
+        </td>
+      </tr>
+  
+    </table>
+  </div>
+  </form>
+  </div>
+  <div class="col col-sm-2"></div>
+</div>
+
+</div>
